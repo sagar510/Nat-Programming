@@ -21,6 +21,10 @@ tsum.(Node.x.ET.right)=x+tsum.right
 tsum.(Node.x.left.right)=x+tsum.left+tsum.right
 
 --Q5: Convert Data Structure in Sir DataStructure
+conv.(Node.x.ET.ET)=[("",x)]
+conv.(Node.x.left.ET)=[("",x)]++insertL.(conv.left)
+conv.(Node.x.ET.right)=[("",x)]++insertR.(conv.right)
+conv.(Node.x.left.right)=[("",x)]++insertL.(conv.left)++insertR.(conv.right)
 
 --Q6: Print List Greater than particular number
 isgreater.(Node.x.ET.ET).k=check.x.k
