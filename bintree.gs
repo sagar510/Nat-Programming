@@ -26,6 +26,9 @@ conv.(Node.x.left.ET)=[("",x)]++insertL.(conv.left)
 conv.(Node.x.ET.right)=[("",x)]++insertR.(conv.right)
 conv.(Node.x.left.right)=[("",x)]++insertL.(conv.left)++insertR.(conv.right)
 
+insertL=map.(\(xs,y)->('L'::xs,y))
+insertR=map.(\(xs,y)->('R'::xs,y))
+
 --Q6: Print List Greater than particular number
 isgreater.(Node.x.ET.ET).k=check.x.k
 isgreater.(Node.x.left.ET).k=(check.x.k)++(isgreater.left.k)
